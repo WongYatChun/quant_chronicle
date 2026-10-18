@@ -1,0 +1,7 @@
+---
+title: "Portfolio Theory"
+track: "Portfolio Theory"
+---
+<p class="eyebrow">RESEARCH TRACK</p><h1>{{ page.title | escape }}</h1><p class="lead">How much should we hold?</p>
+{% assign entries = site.notes | where: 'track', page.track | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% else %}<div class="empty">This track is ready for its first note. Browse the <a href="{{ '/' | relative_url }}">chronicle</a> for the opening entries.</div>{% endfor %}

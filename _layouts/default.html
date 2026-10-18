@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+<meta name="description" content="{{ page.summary | default: site.description | escape }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head><body><a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="{{ '/' | relative_url }}">QF<span> / RESEARCH NOTES</span></a><nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Chronicle</a><a href="{{ '/about/' | relative_url }}">About</a></nav></header>
+<main id="main">{{ content }}</main><footer>A research notebook · Equations, assumptions, connections.</footer></body></html>

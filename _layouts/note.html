@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<article><a class="back" href="{{ '/' | relative_url }}">← All milestones</a>
+<p class="eyebrow">{{ page.track | escape }} / {{ page.year }}</p><h1>{{ page.title | escape }}</h1>
+<p class="authors">{{ page.authors | escape }}</p><p class="lead">{{ page.summary | escape }}</p>
+<nav class="toc" aria-label="On this page"><a href="#why">Why</a><a href="#who">Who</a><a href="#how">How</a><a href="#so-what">So what</a><a href="#references">References</a></nav>
+<div class="prose">{{ content }}</div></article>

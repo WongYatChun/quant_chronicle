@@ -1,0 +1,22 @@
+title: Quantitative Finance
+description: A research chronicle of models, markets, and investment decisions.
+url: ""
+baseurl: ""
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+exclude: [README.md, NOTE-TEMPLATE.txt]
