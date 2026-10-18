@@ -12,7 +12,7 @@ For a project repository, first edit _config.yml and change baseurl to "/quant-c
 
 ## Check the first deployment
 
-Confirm all four track links work, open each of the three notes, and check equations on both desktop and mobile. MathJax is loaded from a CDN, so equations require network access. GitHub's Actions tab shows the Pages build log if publication fails. A 404 immediately after setup may mean deployment is still running; also check that index.html is at the repository root.
+Confirm all four track links work, open the notes, and check equations on both desktop and mobile. MathJax is loaded from a CDN, so equations require network access. GitHub's Actions tab shows the Pages build log if publication fails. A 404 immediately after setup may mean deployment is still running; also check that index.html is at the repository root.
 
 ## Add a milestone
 
@@ -33,7 +33,7 @@ Use a unique filename. Quote metadata strings. Inline mathematics uses $...$; di
 - Appearance: assets/style.css
 - Notes: _notes/*.md
 
-You can press . while viewing the repository to use GitHub's web editor. No database, Node dependencies, local software, or custom build workflow is required. The two empty tracks are intentionally ready for new notes.
+You can press . while viewing the repository to use GitHub's web editor. No database, Node dependencies, local software, or custom build workflow is required. Track indexes collect notes automatically; grouped indexes also use section metadata.
 
 ## Verification limits
 
@@ -44,3 +44,9 @@ The package was checked for valid YAML, note metadata, required sections, expect
 Includes 13 completed microstructure notes in five sections. The existing Kyle note is retained. Project configuration is set to https://wongyatchun.github.io/quant_chronicle/. Upload all extracted contents to the repository root and commit, replacing existing files. No additional workflow is needed. The homepage remains chronological; the microstructure index is grouped by section.
 
 For new microstructure notes add section metadata with exactly one of: Dealer Models; Information from Trading Costs; LOB Modeling; Optimal Execution; Market Making. The year is normally publication year; Hawkes uses the original process year, and the spreads synthesis uses its trade-signing reference year.
+
+## Asset pricing and systematic alpha
+
+Seven notes cover CAPM; APT; Fama–French three factors; momentum and Carhart; Fama–French five factors; IPCA; and Factor Zoo and Nonlinear Expected Return Prediction. Each uses Why → Who → How → So what, core equations, and original references.
+
+The asset-pricing index groups notes with section metadata: Foundations; Empirical Factors; Conditional Factor Models; Factor Zoo and Nonlinear Expected Return Prediction. The final note combines multiple testing, regularization, and nonlinear prediction. The homepage includes all notes automatically. ICAPM, pricing-kernel topics, and autoencoder asset pricing are outside this first-draft scope.

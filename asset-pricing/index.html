@@ -2,6 +2,17 @@
 title: "Asset Pricing & Alpha"
 track: "Asset Pricing & Alpha"
 ---
-<p class="eyebrow">RESEARCH TRACK</p><h1>{{ page.title | escape }}</h1><p class="lead">What determines expected returns?</p>
+<p class="eyebrow">RESEARCH TRACK</p>
+<h1>{{ page.title | escape }}</h1>
+<p class="lead">From market risk and empirical factors to conditional exposures and nonlinear expected return prediction.</p>
+{% assign sections = "Foundations|Empirical Factors|Conditional Factor Models|Factor Zoo and Nonlinear Expected Return Prediction" | split: "|" %}
 {% assign entries = site.notes | where: 'track', page.track | sort: 'year' %}
-{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% else %}<div class="empty">This track is ready for its first note. Browse the <a href="{{ '/' | relative_url }}">chronicle</a> for the opening entries.</div>{% endfor %}
+{% for section in sections %}
+<section>
+<div class="section-head"><h2>{{ section | escape }}</h2></div>
+{% assign section_entries = entries | where: 'section', section %}
+{% for note in section_entries %}
+<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span class="arrow">↗</span></a>
+{% endfor %}
+</section>
+{% endfor %}
