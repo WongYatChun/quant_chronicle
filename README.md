@@ -38,3 +38,9 @@ You can press . while viewing the repository to use GitHub's web editor. No data
 ## Verification limits
 
 The package was checked for valid YAML, note metadata, required sections, expected routes, relative_url use, and ZIP integrity. A full Jekyll build and browser rendering were not available in the preparation environment. The first GitHub Pages build and the visual checks above remain necessary.
+
+## Expanded microstructure edition
+
+Includes 13 completed microstructure notes in five sections. The existing Kyle note is retained. Project configuration is set to https://wongyatchun.github.io/quant_chronicle/. Upload all extracted contents to the repository root and commit, replacing existing files. No additional workflow is needed. The homepage remains chronological; the microstructure index is grouped by section.
+
+For new microstructure notes add section metadata with exactly one of: Dealer Models; Information from Trading Costs; LOB Modeling; Optimal Execution; Market Making. The year is normally publication year; Hawkes uses the original process year, and the spreads synthesis uses its trade-signing reference year.

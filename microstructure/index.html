@@ -1,7 +1,20 @@
 ---
-title: "Market Microstructure & Execution"
-track: "Market Microstructure & Execution"
+title: Market Microstructure & Execution
 ---
-<p class="eyebrow">RESEARCH TRACK</p><h1>{{ page.title | escape }}</h1><p class="lead">How do trading and liquidity shape prices?</p>
-{% assign entries = site.notes | where: 'track', page.track | sort: 'year' %}
-{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% else %}<div class="empty">This track is ready for its first note. Browse the <a href="{{ '/' | relative_url }}">chronicle</a> for the opening entries.</div>{% endfor %}
+<p class="eyebrow">RESEARCH TRACK / 13 CORE ENTRIES</p><h1>Market Microstructure<br>&amp; Execution</h1><p class="lead">Dealers, information, order books, and trading decisions.</p>
+<nav class="toc" aria-label="Sections"><a href="#section-1">Dealer Models</a><a href="#section-2">Information from Trading Costs</a><a href="#section-3">LOB Modeling</a><a href="#section-4">Optimal Execution</a><a href="#section-5">Market Making</a></nav>
+<section id="section-1"><h2>1. Dealer Models</h2>
+{% assign entries = site.notes | where: 'section', 'Dealer Models' | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% endfor %}</section>
+<section id="section-2"><h2>2. Information from Trading Costs</h2>
+{% assign entries = site.notes | where: 'section', 'Information from Trading Costs' | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% endfor %}</section>
+<section id="section-3"><h2>3. LOB Modeling</h2>
+{% assign entries = site.notes | where: 'section', 'LOB Modeling' | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% endfor %}</section>
+<section id="section-4"><h2>4. Optimal Execution</h2>
+{% assign entries = site.notes | where: 'section', 'Optimal Execution' | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% endfor %}</section>
+<section id="section-5"><h2>5. Market Making</h2>
+{% assign entries = site.notes | where: 'section', 'Market Making' | sort: 'year' %}
+{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% endfor %}</section>

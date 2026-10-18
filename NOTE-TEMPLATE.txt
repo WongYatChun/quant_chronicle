@@ -32,3 +32,5 @@ Contribution, limitation, and connections.
 ## References
 
 Original paper with verified DOI or author-hosted link.
+
+For microstructure notes add section: "Dealer Models" (or another exact section name from README).
