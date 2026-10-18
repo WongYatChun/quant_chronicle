@@ -3,40 +3,71 @@ title: "Markowitz — Mean–Variance Optimization"
 year: 1952
 authors: "Harry Markowitz"
 track: "Portfolio Theory"
-summary: "Diversification becomes a problem of portfolio covariance."
+topic: "Mean–Variance Optimization"
+summary: "Choose holdings using expected returns and covariance."
 ---
 
 ## Why?
 
-Choosing attractive securities individually does not determine how to combine them. Their joint behavior matters.
+$$
+\mu_p=w^\top\mu,\qquad \sigma_p^2=w^\top\Sigma w.
+$$
+
+Individual asset quality does not determine portfolio quality.
 
 ## Who?
 
-Harry Markowitz, *Portfolio Selection* (1952).
+Harry Markowitz — *Portfolio Selection* (1952). William Sharpe — *Mutual Fund Performance* (1966).
 
 ## How?
 
-A modern utility formulation of the mean–variance framework is:
+A modern mean–variance formulation:
 
 $$
-\max_w\quad w^\top\mu-\frac{\gamma}{2}w^\top\Sigma w,
-\qquad \mathbf1^\top w=1.
+\boxed{\max_{w\in\mathcal W}\ w^\top\mu-\frac\gamma2w^\top\Sigma w},
+\qquad \gamma>0.
 $$
 
-Here $\mu$ contains expected returns, $\Sigma$ is the covariance matrix, and $\gamma>0$ is risk aversion. Additional constraints can restrict shorting or concentration.
+For a fully invested portfolio, $\mathbf1^\top w=1$. Varying $\gamma$ traces the efficient frontier.
+
+With cash at $r_f$, let $\mu_e=\mu-r_f\mathbf1$. Unconstrained risky exposures satisfy:
 
 $$
-\operatorname{Var}(w^\top R)=\sum_i\sum_jw_iw_j\operatorname{Cov}(R_i,R_j).
+x^*=\frac1\gamma\Sigma^{-1}\mu_e.
 $$
 
-The defining insight: risk depends on how assets move **together**.
+The tangency portfolio maximizes the Sharpe ratio:
+
+$$
+SR(w)=\frac{w^\top\mu_e}{\sqrt{w^\top\Sigma w}},
+\qquad
+w_T=\frac{\Sigma^{-1}\mu_e}{\mathbf1^\top\Sigma^{-1}\mu_e}.
+$$
+
+Assume $\Sigma\succ0$ and a positive normalization denominator.
 
 ## So what?
 
-Portfolio selection becomes an optimization problem and produces an efficient frontier. In practice, noisy return and covariance estimates can produce unstable weights.
+$$
+\sigma_p^2=\sum_iw_i^2\sigma_i^2+
+2\sum_{i<j}w_iw_j\rho_{ij}\sigma_i\sigma_j.
+$$
 
-**Research connections:** Tobin separation, Bayesian portfolio choice, Black–Litterman, regularization, and robust optimization.
+**Diversification depends on covariance.** Positive leverage preserves Sharpe before financing frictions:
+
+$$
+SR(ax)=SR(x),\qquad a>0.
+$$
+
+Forecast error is amplified by inverse covariance:
+
+$$
+\Delta x^*=\frac1\gamma\Sigma^{-1}\Delta\mu.
+$$
+
+**Connections:** [Estimation risk]({{ '/notes/1986-estimation-regularization/' | relative_url }}) · [Kelly]({{ '/notes/1956-kelly/' | relative_url }}).
 
 ## References
 
-Markowitz, H. (1952). [Portfolio Selection](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x). *The Journal of Finance*, 7(1), 77–91.
+- Markowitz (1952), [Portfolio Selection](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x).
+- Sharpe (1966), *Mutual Fund Performance*.
