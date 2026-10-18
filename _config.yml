@@ -1,7 +1,7 @@
 title: Quantitative Finance
 description: A research chronicle of models, markets, and investment decisions.
 url: "https://wongyatchun.github.io"
-baseurl: "quant_chronicle"
+baseurl: "/quant_chronicle"
 markdown: kramdown
 kramdown:
   math_engine: mathjax

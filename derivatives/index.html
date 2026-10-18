@@ -2,6 +2,44 @@
 title: "Derivatives"
 track: "Derivatives"
 ---
-<p class="eyebrow">RESEARCH TRACK</p><h1>{{ page.title | escape }}</h1><p class="lead">How do we price and hedge contingent claims?</p>
-{% assign entries = site.notes | where: 'track', page.track | sort: 'year' %}
-{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% else %}<div class="empty">This track is ready for its first note. Browse the <a href="{{ '/' | relative_url }}">chronicle</a> for the opening entries.</div>{% endfor %}
+<p class="eyebrow">RESEARCH TRACK · FIRST DRAFT</p><h1>Derivatives</h1>
+<p class="lead">How do we price and hedge contingent claims?</p>
+<p>Read within each branch. Dates identify selected publications; exotics is a thematic overview. Every note follows Why → Who → How → So what.</p>
+<nav class="toc" aria-label="Derivatives sections">
+<a href="#section-0">Foundations</a>
+<a href="#section-1">Volatility models</a>
+<a href="#section-2">Interest-rate models</a>
+<a href="#section-3">Exotic derivatives</a>
+<a href="#section-4">Numerical & modern methods</a>
+</nav>
+<section id="section-0"><h2>Foundations</h2>
+<a class="entry" href="{{ "/notes/1900-bachelier/" | relative_url }}"><span class="year">1900</span><div><h3>Bachelier — Normal Price Dynamics</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1973-black-scholes-merton/" | relative_url }}"><span class="year">1973</span><div><h3>Black–Scholes–Merton — Replication, Greeks & Hedging</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1979-binomial/" | relative_url }}"><span class="year">1979</span><div><h3>Cox–Ross–Rubinstein — Binomial Replication</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1979-risk-neutral-valuation/" | relative_url }}"><span class="year">1979</span><div><h3>Risk-Neutral Valuation — Measures & Numeraires</h3></div><span>↗</span></a>
+</section>
+<section id="section-1"><h2>Volatility models</h2>
+<a class="entry" href="{{ "/notes/1976-merton-jumps/" | relative_url }}"><span class="year">1976</span><div><h3>Merton — Jump Diffusion</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1993-heston/" | relative_url }}"><span class="year">1993</span><div><h3>Heston — Stochastic Variance</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1994-local-volatility/" | relative_url }}"><span class="year">1994</span><div><h3>Dupire / Derman–Kani — Local Volatility</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/2002-sabr/" | relative_url }}"><span class="year">2002</span><div><h3>SABR — A Tractable Smile</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/2016-rough-volatility/" | relative_url }}"><span class="year">2016</span><div><h3>Rough Volatility — Irregular Variance Dynamics</h3></div><span>↗</span></a>
+</section>
+<section id="section-2"><h2>Interest-rate models</h2>
+<a class="entry" href="{{ "/notes/1977-vasicek/" | relative_url }}"><span class="year">1977</span><div><h3>Vasicek — Gaussian Mean Reversion</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1985-cir/" | relative_url }}"><span class="year">1985</span><div><h3>CIR — Nonnegative Short Rates</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1986-ho-lee/" | relative_url }}"><span class="year">1986</span><div><h3>Ho–Lee — Fit the Initial Curve</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1990-hull-white/" | relative_url }}"><span class="year">1990</span><div><h3>Hull–White — Curve Fit with Mean Reversion</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1992-hjm/" | relative_url }}"><span class="year">1992</span><div><h3>HJM — Forward-Curve Dynamics</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1997-libor-market-model/" | relative_url }}"><span class="year">1997</span><div><h3>LIBOR Market Model — Contract Forward Rates</h3></div><span>↗</span></a>
+</section>
+<section id="section-3"><h2>Exotic derivatives</h2>
+<a class="entry" href="{{ "/notes/1990-exotic-derivatives/" | relative_url }}"><span class="year">Overview</span><div><h3>Exotic Derivatives — Paths, Dependence & Exercise</h3></div><span>↗</span></a>
+</section>
+<section id="section-4"><h2>Numerical & modern methods</h2>
+<a class="entry" href="{{ "/notes/1977-finite-differences/" | relative_url }}"><span class="year">1977</span><div><h3>Finite Differences — Pricing on a Grid</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/1977-monte-carlo/" | relative_url }}"><span class="year">1977</span><div><h3>Boyle — Monte Carlo Pricing</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/2001-longstaff-schwartz/" | relative_url }}"><span class="year">2001</span><div><h3>Longstaff–Schwartz — Regression for Exercise</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/2011-xva/" | relative_url }}"><span class="year">2011</span><div><h3>XVA — Default, Collateral & Funding</h3></div><span>↗</span></a>
+<a class="entry" href="{{ "/notes/2019-deep-hedging/" | relative_url }}"><span class="year">2019</span><div><h3>Deep Hedging — Learn the Trading Policy</h3></div><span>↗</span></a>
+</section>
