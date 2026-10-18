@@ -2,6 +2,35 @@
 title: "Portfolio Theory"
 track: "Portfolio Theory"
 ---
-<p class="eyebrow">RESEARCH TRACK</p><h1>{{ page.title | escape }}</h1><p class="lead">How much should we hold?</p>
-{% assign entries = site.notes | where: 'track', page.track | sort: 'year' %}
-{% for note in entries %}<a class="entry" href="{{ note.url | relative_url }}"><span class="year">{{ note.year }}</span><div><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p></div><span>↗</span></a>{% else %}<div class="empty">This track is ready for its first note. Browse the <a href="{{ '/' | relative_url }}">chronicle</a> for the opening entries.</div>{% endfor %}
+<p class="eyebrow">RESEARCH TRACK · FIRST DRAFT</p>
+<h1>Portfolio Theory</h1>
+<p class="lead">How much should we hold?</p>
+<p>Six topics, grouped by research question. Dates identify selected publications, rather than a strict reading order. Each note follows Why → Who → How → So what.</p>
+<nav class="toc" aria-label="Portfolio topics">
+<a href="#topic-1">Mean–Variance Optimization</a>
+<a href="#topic-2">Growth-Optimal Allocation</a>
+<a href="#topic-3">Estimation &amp; Uncertainty</a>
+<a href="#topic-4">Black–Litterman</a>
+<a href="#topic-5">Risk-Based Allocation</a>
+<a href="#topic-6">Learning to Allocate</a>
+</nav>
+<section id="topic-1"><h2>Mean–Variance Optimization</h2>
+<a class="entry" href="{{ '/notes/1952-markowitz/' | relative_url }}"><span class="year">1952</span><div><h3>Markowitz — Mean–Variance Optimization</h3></div><span>↗</span></a>
+</section>
+<section id="topic-2"><h2>Growth-Optimal Allocation</h2>
+<a class="entry" href="{{ '/notes/1956-kelly/' | relative_url }}"><span class="year">1956</span><div><h3>Kelly — Growth-Optimal Allocation</h3></div><span>↗</span></a>
+</section>
+<section id="topic-3"><h2>Estimation &amp; Uncertainty</h2>
+<a class="entry" href="{{ '/notes/1986-estimation-regularization/' | relative_url }}"><span class="year">1986</span><div><h3>Estimation Risk &amp; Regularization</h3></div><span>↗</span></a>
+<a class="entry" href="{{ '/notes/2003-robust-optimization/' | relative_url }}"><span class="year">2003</span><div><h3>Robust Portfolio Optimization</h3></div><span>↗</span></a>
+</section>
+<section id="topic-4"><h2>Black–Litterman</h2>
+<a class="entry" href="{{ '/notes/1992-black-litterman/' | relative_url }}"><span class="year">1992</span><div><h3>Black–Litterman — Priors &amp; Views</h3></div><span>↗</span></a>
+</section>
+<section id="topic-5"><h2>Risk-Based Allocation</h2>
+<a class="entry" href="{{ '/notes/2010-risk-budgeting/' | relative_url }}"><span class="year">2010</span><div><h3>Risk Budgeting &amp; Risk Parity</h3></div><span>↗</span></a>
+</section>
+<section id="topic-6"><h2>Learning to Allocate</h2>
+<a class="entry" href="{{ '/notes/1991-online-portfolio-selection/' | relative_url }}"><span class="year">1991</span><div><h3>Online Portfolio Selection</h3></div><span>↗</span></a>
+<a class="entry" href="{{ '/notes/2019-end-to-end-allocation/' | relative_url }}"><span class="year">2019</span><div><h3>Decision-Focused / End-to-End Learning</h3></div><span>↗</span></a>
+</section>
